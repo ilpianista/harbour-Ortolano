@@ -9,6 +9,8 @@
 #include <QSqlDatabase>
 #include <QStandardPaths>
 
+#include <QtQuick>
+
 static void registerQmlTypes()
 {
     qmlRegisterType<SpeciesModel>("harbour.ortolano", 1, 0, "SpeciesModel");
