@@ -1,0 +1,4 @@
+# Rename this file to harbour-ortolano.changes to include it in the RPM.
+
+* Sun Aug 10 2026 Andrea Scarpino <andrea@scarpino.dev> 0.1.0-1
+- Initial release

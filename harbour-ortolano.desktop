@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=harbour-ortolano
+Exec=harbour-ortolano
+Name=Ortolano
+
+[X-HarbourBackup]
+BackupPathList=.local/share/dev.scarpino/harbour-ortolano/
+
+[X-Sailjail]
+OrganizationName=dev.scarpino
+ApplicationName=harbour-ortolano
+Permissions=
