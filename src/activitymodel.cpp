@@ -91,7 +91,7 @@ int ActivityModel::harvestTypeId() const
 void ActivityModel::loadAreaNames(ActivityEntry &e)
 {
     QSqlQuery q(m_db);
-    q.prepare(QStringLiteral("SELECT a.name FROM activity_areas aa "
+    q.prepare(QStringLiteral("SELECT a.name, aa.area_id FROM activity_areas aa "
                              "JOIN areas a ON aa.area_id = a.id "
                              "WHERE aa.activity_id = ? ORDER BY a.name"));
     q.addBindValue(e.id);
@@ -100,23 +100,10 @@ void ActivityModel::loadAreaNames(ActivityEntry &e)
     e.areaIds.clear();
     while (q.next()) {
         names << q.value(0).toString();
-    }
-
-    q.prepare(QStringLiteral("SELECT area_id FROM activity_areas WHERE activity_id = ?"));
-    q.addBindValue(e.id);
-    q.exec();
-    while (q.next()) {
-        e.areaIds.insert(q.value(0).toInt());
+        e.areaIds.insert(q.value(1).toInt());
     }
 
     e.areaNames = names.join(QStringLiteral(", "));
-}
-
-QString ActivityModel::resolveTypeName(int typeId) const
-{
-    if (typeId < 0 || typeId >= m_typeNames.size())
-        return {};
-    return m_typeNames.at(typeId);
 }
 
 void ActivityModel::setActivityAreas(int activityId, const QVariantList &areaIds)
@@ -139,15 +126,6 @@ void ActivityModel::loadPending()
     beginResetModel();
     m_entries.clear();
     loadSection(QStringLiteral("pending"));
-    endResetModel();
-    emit countChanged();
-}
-
-void ActivityModel::loadDone()
-{
-    beginResetModel();
-    m_entries.clear();
-    loadSection(QStringLiteral("completed"));
     endResetModel();
     emit countChanged();
 }
@@ -201,7 +179,7 @@ void ActivityModel::loadSection(const QString &section)
 
         if (source == 0) {
             e.activityTypeId = q.value(1).toInt();
-            e.activityTypeName = resolveTypeName(e.activityTypeId);
+            e.activityTypeName = activityTypeName(e.activityTypeId);
             loadAreaNames(e);
         } else {
             e.activityTypeName = tr("Planted");
@@ -234,7 +212,7 @@ void ActivityModel::loadByArea(int areaId)
         ActivityEntry e;
         e.id = q.value(0).toInt();
         e.activityTypeId = q.value(1).toInt();
-        e.activityTypeName = resolveTypeName(e.activityTypeId);
+        e.activityTypeName = activityTypeName(e.activityTypeId);
         e.date = q.value(2).toString();
         e.notes = q.value(3).toString();
         e.speciesId = q.value(4).toInt();
@@ -275,7 +253,7 @@ bool ActivityModel::addActivity(int activityTypeId,
     ActivityEntry e;
     e.id = newId;
     e.activityTypeId = activityTypeId;
-    e.activityTypeName = resolveTypeName(activityTypeId);
+    e.activityTypeName = activityTypeName(activityTypeId);
     e.date = date;
     e.notes = notes;
     e.speciesId = speciesId;
@@ -325,7 +303,7 @@ bool ActivityModel::updateActivity(int id,
     for (int i = 0; i < m_entries.size(); ++i) {
         if (m_entries[i].id == id) {
             m_entries[i].activityTypeId = activityTypeId;
-            m_entries[i].activityTypeName = resolveTypeName(activityTypeId);
+            m_entries[i].activityTypeName = activityTypeName(activityTypeId);
             m_entries[i].date = date;
             m_entries[i].notes = notes;
             m_entries[i].speciesId = speciesId;

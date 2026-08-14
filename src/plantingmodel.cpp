@@ -24,16 +24,10 @@ QVariant PlantingModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case IdRole:
         return e.id;
-    case AreaIdRole:
-        return e.areaId;
     case SpeciesIdRole:
         return e.speciesId;
     case SpeciesNameRole:
         return e.speciesName;
-    case AreaNameRole:
-        return e.areaName;
-    case PlantsCountRole:
-        return e.plantsCount;
     case PlantedDateRole:
         return e.plantedDate;
     case SowingTypeRole:
@@ -50,11 +44,8 @@ QVariant PlantingModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> PlantingModel::roleNames() const
 {
     return {{IdRole, "plantingId"},
-            {AreaIdRole, "areaId"},
             {SpeciesIdRole, "speciesId"},
             {SpeciesNameRole, "speciesName"},
-            {AreaNameRole, "areaName"},
-            {PlantsCountRole, "plantsCount"},
             {PlantedDateRole, "plantedDate"},
             {SowingTypeRole, "sowingType"},
             {SowingDetailRole, "sowingDetail"},
@@ -67,27 +58,22 @@ void PlantingModel::loadByArea(int areaId)
     m_entries.clear();
 
     QSqlQuery q(m_db);
-    q.prepare(QStringLiteral(
-        "SELECT p.id, p.area_id, p.species_id, s.name AS sp_name, a.name AS ar_name, "
-        "p.plants_count, p.planted_date, p.sowing_type, p.sowing_detail, p.notes "
-        "FROM plantings p "
-        "JOIN species s ON p.species_id = s.id "
-        "JOIN areas a ON p.area_id = a.id "
-        "WHERE p.area_id = ? ORDER BY p.planted_date DESC"));
+    q.prepare(QStringLiteral("SELECT p.id, p.species_id, s.name, p.planted_date, p.sowing_type, "
+                             "p.sowing_detail, p.notes "
+                             "FROM plantings p "
+                             "JOIN species s ON p.species_id = s.id "
+                             "WHERE p.area_id = ? ORDER BY p.planted_date DESC"));
     q.addBindValue(areaId);
     q.exec();
     while (q.next()) {
         PlantingEntry e;
         e.id = q.value(0).toInt();
-        e.areaId = q.value(1).toInt();
-        e.speciesId = q.value(2).toInt();
-        e.speciesName = q.value(3).toString();
-        e.areaName = q.value(4).toString();
-        e.plantsCount = q.value(5).toInt();
-        e.plantedDate = q.value(6).toString();
-        e.sowingType = q.value(7).toString();
-        e.sowingDetail = q.value(8).toInt();
-        e.notes = q.value(9).toString();
+        e.speciesId = q.value(1).toInt();
+        e.speciesName = q.value(2).toString();
+        e.plantedDate = q.value(3).toString();
+        e.sowingType = q.value(4).toString();
+        e.sowingDetail = q.value(5).toInt();
+        e.notes = q.value(6).toString();
         m_entries.append(e);
     }
 
@@ -97,20 +83,17 @@ void PlantingModel::loadByArea(int areaId)
 
 bool PlantingModel::addPlanting(int areaId,
                                 int speciesId,
-                                int plantsCount,
                                 const QString &plantedDate,
                                 const QString &sowingType,
                                 int sowingDetail,
                                 const QString &notes)
 {
     QSqlQuery q(m_db);
-    q.prepare(
-        QStringLiteral("INSERT INTO plantings (area_id, species_id, plants_count, planted_date, "
-                       "sowing_type, sowing_detail, notes) "
-                       "VALUES (?, ?, ?, ?, ?, ?, ?)"));
+    q.prepare(QStringLiteral("INSERT INTO plantings (area_id, species_id, planted_date, "
+                             "sowing_type, sowing_detail, notes) "
+                             "VALUES (?, ?, ?, ?, ?, ?)"));
     q.addBindValue(areaId);
     q.addBindValue(speciesId);
-    q.addBindValue(plantsCount);
     q.addBindValue(plantedDate);
     q.addBindValue(sowingType);
     q.addBindValue(sowingDetail);
@@ -122,24 +105,17 @@ bool PlantingModel::addPlanting(int areaId,
 
     PlantingEntry e;
     e.id = q.lastInsertId().toInt();
-    e.areaId = areaId;
     e.speciesId = speciesId;
-    e.plantsCount = plantsCount;
     e.plantedDate = plantedDate;
     e.sowingType = sowingType;
     e.sowingDetail = sowingDetail;
     e.notes = notes;
 
     QSqlQuery nq(m_db);
-    nq.prepare(QStringLiteral("SELECT s.name, a.name FROM plantings p "
-                              "JOIN species s ON p.species_id = s.id "
-                              "JOIN areas a ON p.area_id = a.id "
-                              "WHERE p.id = ?"));
-    nq.addBindValue(e.id);
-    if (nq.exec() && nq.next()) {
+    nq.prepare(QStringLiteral("SELECT name FROM species WHERE id = ?"));
+    nq.addBindValue(speciesId);
+    if (nq.exec() && nq.next())
         e.speciesName = nq.value(0).toString();
-        e.areaName = nq.value(1).toString();
-    }
 
     beginInsertRows(QModelIndex(), m_entries.size(), m_entries.size());
     m_entries.append(e);
@@ -150,17 +126,15 @@ bool PlantingModel::addPlanting(int areaId,
 
 bool PlantingModel::updatePlanting(int id,
                                    int speciesId,
-                                   int plantsCount,
                                    const QString &plantedDate,
                                    const QString &sowingType,
                                    int sowingDetail,
                                    const QString &notes)
 {
     QSqlQuery q(m_db);
-    q.prepare(QStringLiteral("UPDATE plantings SET species_id=?, plants_count=?, planted_date=?, "
+    q.prepare(QStringLiteral("UPDATE plantings SET species_id=?, planted_date=?, "
                              "sowing_type=?, sowing_detail=?, notes=? WHERE id=?"));
     q.addBindValue(speciesId);
-    q.addBindValue(plantsCount);
     q.addBindValue(plantedDate);
     q.addBindValue(sowingType);
     q.addBindValue(sowingDetail);
@@ -174,7 +148,6 @@ bool PlantingModel::updatePlanting(int id,
     for (int i = 0; i < m_entries.size(); ++i) {
         if (m_entries[i].id == id) {
             m_entries[i].speciesId = speciesId;
-            m_entries[i].plantsCount = plantsCount;
             m_entries[i].plantedDate = plantedDate;
             m_entries[i].sowingType = sowingType;
             m_entries[i].sowingDetail = sowingDetail;
@@ -220,20 +193,18 @@ QVariantMap PlantingModel::getById(int id) const
     QVariantMap map;
     QSqlQuery q(m_db);
     q.prepare(
-        QStringLiteral("SELECT p.id, p.area_id, p.species_id, p.plants_count, p.planted_date, "
-                       "p.sowing_type, p.sowing_detail, p.notes, s.name "
+        QStringLiteral("SELECT p.id, p.species_id, p.planted_date, p.sowing_type, p.sowing_detail, "
+                       "p.notes, s.name "
                        "FROM plantings p JOIN species s ON p.species_id = s.id WHERE p.id = ?"));
     q.addBindValue(id);
     if (q.exec() && q.next()) {
         map[QStringLiteral("plantingId")] = q.value(0);
-        map[QStringLiteral("areaId")] = q.value(1);
-        map[QStringLiteral("speciesId")] = q.value(2);
-        map[QStringLiteral("plantsCount")] = q.value(3);
-        map[QStringLiteral("plantedDate")] = q.value(4);
-        map[QStringLiteral("sowingType")] = q.value(5);
-        map[QStringLiteral("sowingDetail")] = q.value(6);
-        map[QStringLiteral("notes")] = q.value(7);
-        map[QStringLiteral("speciesName")] = q.value(8);
+        map[QStringLiteral("speciesId")] = q.value(1);
+        map[QStringLiteral("plantedDate")] = q.value(2);
+        map[QStringLiteral("sowingType")] = q.value(3);
+        map[QStringLiteral("sowingDetail")] = q.value(4);
+        map[QStringLiteral("notes")] = q.value(5);
+        map[QStringLiteral("speciesName")] = q.value(6);
     }
     return map;
 }

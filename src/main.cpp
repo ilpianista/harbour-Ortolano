@@ -6,7 +6,6 @@
 #include <sailfishapp.h>
 #include <QDir>
 #include <QGuiApplication>
-#include <QSqlDatabase>
 #include <QStandardPaths>
 
 #include <QtQuick>

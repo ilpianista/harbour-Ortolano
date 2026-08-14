@@ -61,9 +61,9 @@ Dialog {
         var notes = notesField.text;
 
         if (editId > 0) {
-            plantingModel.updatePlanting(editId, spId, 0, d, sType, sDetail, notes);
+            plantingModel.updatePlanting(editId, spId, d, sType, sDetail, notes);
         } else {
-            plantingModel.addPlanting(areaId, spId, 0, d, sType, sDetail, notes);
+            plantingModel.addPlanting(areaId, spId, d, sType, sDetail, notes);
         }
     }
 
@@ -102,7 +102,6 @@ Dialog {
             }
 
             ValueButton {
-                id: dateButton
                 width: parent.width
                 label: qsTr("Planting date")
                 value: Qt.formatDate(_plantingDate, Qt.DefaultLocaleShortDate)

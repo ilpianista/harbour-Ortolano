@@ -29,7 +29,6 @@ Dialog {
         } else {
             selectedIds.push(areaId);
         }
-        selectedIds = selectedIds;
     }
 
     canAccept: selectedIds.length > 0

@@ -16,8 +16,7 @@ bool DatabaseManager::initDatabase(const QString &path)
     m_db.setDatabaseName(path);
 
     if (!m_db.open()) {
-        setLastError(m_db.lastError().text());
-        qWarning() << "Failed to open database:" << m_lastError;
+        qWarning() << "Failed to open database:" << m_db.lastError().text();
         return false;
     }
 
@@ -159,12 +158,4 @@ void DatabaseManager::seedData()
     settings.exec();
 
     m_db.commit();
-}
-
-void DatabaseManager::setLastError(const QString &error)
-{
-    if (m_lastError != error) {
-        m_lastError = error;
-        emit lastErrorChanged();
-    }
 }

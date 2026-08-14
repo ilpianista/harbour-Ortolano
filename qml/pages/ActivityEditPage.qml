@@ -104,7 +104,6 @@ Dialog {
             }
 
             ValueButton {
-                id: dateButton
                 width: parent.width
                 label: qsTr("Date")
                 value: Qt.formatDate(_activityDate, Qt.DefaultLocaleShortDate)

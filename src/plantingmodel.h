@@ -6,11 +6,8 @@
 struct PlantingEntry
 {
     int id = 0;
-    int areaId = 0;
     int speciesId = 0;
     QString speciesName;
-    QString areaName;
-    int plantsCount = 0;
     QString plantedDate;
     QString sowingType;
     int sowingDetail = 0;
@@ -25,11 +22,8 @@ class PlantingModel : public QAbstractListModel
 public:
     enum Roles {
         IdRole = Qt::UserRole + 1,
-        AreaIdRole,
         SpeciesIdRole,
         SpeciesNameRole,
-        AreaNameRole,
-        PlantsCountRole,
         PlantedDateRole,
         SowingTypeRole,
         SowingDetailRole,
@@ -45,14 +39,12 @@ public:
     Q_INVOKABLE void loadByArea(int areaId);
     Q_INVOKABLE bool addPlanting(int areaId,
                                  int speciesId,
-                                 int plantsCount,
                                  const QString &plantedDate,
                                  const QString &sowingType,
                                  int sowingDetail,
                                  const QString &notes);
     Q_INVOKABLE bool updatePlanting(int id,
                                     int speciesId,
-                                    int plantsCount,
                                     const QString &plantedDate,
                                     const QString &sowingType,
                                     int sowingDetail,

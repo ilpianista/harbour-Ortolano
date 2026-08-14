@@ -65,7 +65,6 @@ public:
     int count() const { return m_entries.size(); }
 
     Q_INVOKABLE void loadPending();
-    Q_INVOKABLE void loadDone();
     Q_INVOKABLE void loadAll();
     Q_INVOKABLE void loadByArea(int areaId);
     Q_INVOKABLE QString activityTypeName(int index) const;
@@ -93,7 +92,6 @@ signals:
 private:
     void loadAreaNames(ActivityEntry &e);
     void setActivityAreas(int activityId, const QVariantList &areaIds);
-    QString resolveTypeName(int typeId) const;
     void loadSection(const QString &section);
 
     QSqlDatabase m_db;
