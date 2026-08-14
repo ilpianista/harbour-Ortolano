@@ -230,7 +230,7 @@ Dialog {
             }
 
             SectionHeader {
-                text: qsTr("Actual size (meters)")
+                text: qsTr("Actual size")
             }
 
             TextField {

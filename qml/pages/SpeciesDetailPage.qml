@@ -118,7 +118,7 @@ Dialog {
                 id: plantSpacingField
                 width: parent.width
                 label: qsTr("Plant spacing (cm)")
-                placeholderText: qsTr("e.g. 30")
+                placeholderText: qsTr("e.g. 25")
                 inputMethodHints: Qt.ImhDigitsOnly
                 EnterKey.iconSource: "image://theme/icon-m-enter-next"
                 EnterKey.onClicked: notesField.focus = true
