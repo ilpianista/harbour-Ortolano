@@ -48,16 +48,16 @@
         <translation>Specie</translation>
     </message>
     <message>
-        <source>Select...</source>
-        <translation>Seleziona...</translation>
+        <source>Select…</source>
+        <translation>Seleziona…</translation>
     </message>
     <message>
         <source>Notes</source>
         <translation>Note</translation>
     </message>
     <message>
-        <source>Optional notes...</source>
-        <translation>Note opzionali...</translation>
+        <source>Optional notes…</source>
+        <translation>Note opzionali…</translation>
     </message>
     <message>
         <source>Quantity (kg)</source>
@@ -206,8 +206,8 @@
         <translation>Note</translation>
     </message>
     <message>
-        <source>Optional notes...</source>
-        <translation>Note opzionali...</translation>
+        <source>Optional notes…</source>
+        <translation>Note opzionali…</translation>
     </message>
 </context>
 <context>
@@ -344,8 +344,8 @@
         <translation>Specie</translation>
     </message>
     <message>
-        <source>Select...</source>
-        <translation>Seleziona...</translation>
+        <source>Select…</source>
+        <translation>Seleziona…</translation>
     </message>
     <message>
         <source>Spacing</source>
@@ -392,8 +392,8 @@
         <translation>Note</translation>
     </message>
     <message>
-        <source>Optional notes...</source>
-        <translation>Note opzionali...</translation>
+        <source>Optional notes…</source>
+        <translation>Note opzionali…</translation>
     </message>
 </context>
 <context>
@@ -479,8 +479,8 @@
         <translation>Note</translation>
     </message>
     <message>
-        <source>Optional notes...</source>
-        <translation>Note opzionali...</translation>
+        <source>Optional notes…</source>
+        <translation>Note opzionali…</translation>
     </message>
 </context>
 <context>
@@ -494,8 +494,8 @@
         <translation>Specie</translation>
     </message>
     <message>
-        <source>Search species...</source>
-        <translation>Cerca specie...</translation>
+        <source>Search species…</source>
+        <translation>Cerca specie…</translation>
     </message>
     <message>
         <source>Deleting species</source>
@@ -513,8 +513,8 @@
         <translation>Seleziona specie</translation>
     </message>
     <message>
-        <source>Search species...</source>
-        <translation>Cerca specie...</translation>
+        <source>Search species…</source>
+        <translation>Cerca specie…</translation>
     </message>
     <message>
         <source>No species</source>

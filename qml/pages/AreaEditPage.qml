@@ -253,7 +253,7 @@ Dialog {
                 id: notesField
                 width: parent.width
                 label: qsTr("Notes")
-                placeholderText: qsTr("Optional notes...")
+                placeholderText: qsTr("Optional notes…")
             }
         }
 

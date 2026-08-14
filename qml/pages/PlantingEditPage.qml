@@ -84,7 +84,7 @@ Dialog {
                 id: speciesButton
                 width: parent.width
                 label: qsTr("Species")
-                value: qsTr("Select...")
+                value: qsTr("Select…")
                 onClicked: {
                     var picker = pageStack.push(Qt.resolvedUrl("SpeciesPickerPage.qml"));
                     picker.speciesPicked.connect(function (speciesId, name) {
@@ -153,7 +153,7 @@ Dialog {
                 id: notesField
                 width: parent.width
                 label: qsTr("Notes")
-                placeholderText: qsTr("Optional notes...")
+                placeholderText: qsTr("Optional notes…")
             }
         }
 

@@ -39,7 +39,7 @@ Page {
             SearchField {
                 id: searchField
                 width: parent.width
-                placeholderText: qsTr("Search species...")
+                placeholderText: qsTr("Search species…")
                 onTextChanged: {
                     if (text.length > 0) {
                         speciesModel.search(text);

@@ -48,7 +48,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Select...</source>
+        <source>Select…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -56,7 +56,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Optional notes...</source>
+        <source>Optional notes…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -206,7 +206,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Optional notes...</source>
+        <source>Optional notes…</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -344,7 +344,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Select...</source>
+        <source>Select…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -392,7 +392,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Optional notes...</source>
+        <source>Optional notes…</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -479,7 +479,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Optional notes...</source>
+        <source>Optional notes…</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -494,7 +494,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Search species...</source>
+        <source>Search species…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -513,7 +513,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Search species...</source>
+        <source>Search species…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
