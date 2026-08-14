@@ -13,8 +13,10 @@ Page {
     }
 
     onStatusChanged: {
-        if (status === PageStatus.Active)
+        if (status === PageStatus.Active) {
+            pageStack.pushAttached(Qt.resolvedUrl("GardenCanvas.qml"));
             mainActivityModel.loadAll();
+        }
     }
 
     RemorsePopup {
@@ -47,13 +49,7 @@ Page {
             width: listView.width
 
             PageHeader {
-                title: qsTr("Garden")
-            }
-
-            Button {
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("My garden")
-                onClicked: pageStack.push(Qt.resolvedUrl("GardenCanvas.qml"))
+                title: "Ortolano"
             }
 
             InfoLabel {

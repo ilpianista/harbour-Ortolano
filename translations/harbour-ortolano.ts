@@ -251,10 +251,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Garden</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Beds</source>
         <translation type="unfinished"></translation>
     </message>
@@ -264,6 +260,10 @@
     </message>
     <message>
         <source>Deleting bed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>My garden</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -298,14 +298,6 @@
     </message>
     <message>
         <source>New activity</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Garden</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>My garden</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

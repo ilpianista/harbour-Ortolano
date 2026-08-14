@@ -75,7 +75,7 @@ Page {
             width: page.width
 
             PageHeader {
-                title: qsTr("Garden")
+                title: qsTr("My garden")
             }
 
             Rectangle {
