@@ -5,520 +5,520 @@
     <name>ActivityEditPage</name>
     <message>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna</translation>
     </message>
     <message>
         <source>Edit activity</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica attività</translation>
     </message>
     <message>
         <source>New activity</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova attività</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva</translation>
     </message>
     <message>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi</translation>
     </message>
     <message>
         <source>Activity type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo attività</translation>
     </message>
     <message>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Dettagli</translation>
     </message>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Data</translation>
     </message>
     <message>
         <source>Beds</source>
-        <translation type="unfinished"></translation>
+        <translation>Prode</translation>
     </message>
     <message>
         <source>%1 selected</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 selezionata</translation>
     </message>
     <message>
         <source>Species</source>
-        <translation type="unfinished"></translation>
+        <translation>Specie</translation>
     </message>
     <message>
         <source>Select...</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona...</translation>
     </message>
     <message>
         <source>Notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Note</translation>
     </message>
     <message>
         <source>Optional notes...</source>
-        <translation type="unfinished"></translation>
+        <translation>Note opzionali...</translation>
     </message>
     <message>
         <source>Quantity (kg)</source>
-        <translation type="unfinished"></translation>
+        <translation>Quantità (kg)</translation>
     </message>
 </context>
 <context>
     <name>AreaDetailPage</name>
     <message>
         <source>Edit bed</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica proda</translation>
     </message>
     <message>
         <source>Add planting</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi piantagione</translation>
     </message>
     <message>
         <source>Bed %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Proda %1</translation>
     </message>
     <message>
         <source>Actual dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensioni reali</translation>
     </message>
     <message>
         <source>Notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Note</translation>
     </message>
     <message>
         <source>Plantings</source>
-        <translation type="unfinished"></translation>
+        <translation>Piantagioni</translation>
     </message>
     <message>
         <source>Planted: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Piantato: %1</translation>
     </message>
     <message>
         <source>in rows</source>
-        <translation type="unfinished"></translation>
+        <translation>in file</translation>
     </message>
     <message>
         <source>broadcast</source>
-        <translation type="unfinished"></translation>
+        <translation>a spaglio</translation>
     </message>
     <message>
         <source>in holes</source>
-        <translation type="unfinished"></translation>
+        <translation>in buchette</translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina</translation>
     </message>
     <message>
         <source>Deleting planting</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina piantagione</translation>
     </message>
     <message>
         <source>Recent activities</source>
-        <translation type="unfinished"></translation>
+        <translation>Attività recenti</translation>
     </message>
     <message>
         <source>No plants</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna pianta</translation>
     </message>
     <message>
         <source>No activities</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna attività</translation>
     </message>
 </context>
 <context>
     <name>AreaEditPage</name>
     <message>
         <source>Height exceeds garden bounds</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;altezza supera i confini dell&apos;orto</translation>
     </message>
     <message>
         <source>Width exceeds garden bounds</source>
-        <translation type="unfinished"></translation>
+        <translation>La larghezza supera i confini dell&apos;orto</translation>
     </message>
     <message>
         <source>Edit bed</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica proda</translation>
     </message>
     <message>
         <source>New bed</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova proda</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva</translation>
     </message>
     <message>
         <source>Create</source>
-        <translation type="unfinished"></translation>
+        <translation>Crea</translation>
     </message>
     <message>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Anteprima</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <source>e.g. Bed 1</source>
-        <translation type="unfinished"></translation>
+        <translation>es. Proda 1</translation>
     </message>
     <message>
         <source>Grid position</source>
-        <translation type="unfinished"></translation>
+        <translation>Posizione griglia</translation>
     </message>
     <message>
         <source>Garden: %1 x %2 cells</source>
-        <translation type="unfinished"></translation>
+        <translation>Orto: %1 x %2 celle</translation>
     </message>
     <message>
         <source>Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Riga</translation>
     </message>
     <message>
         <source>Column</source>
-        <translation type="unfinished"></translation>
+        <translation>Colonna</translation>
     </message>
     <message>
         <source>Height (cells)</source>
-        <translation type="unfinished"></translation>
+        <translation>Altezza (celle)</translation>
     </message>
     <message>
         <source>Width (cells)</source>
-        <translation type="unfinished"></translation>
+        <translation>Larghezza (celle)</translation>
     </message>
     <message>
         <source>Actual size (meters)</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensioni reali (metri)</translation>
     </message>
     <message>
         <source>Width (m)</source>
-        <translation type="unfinished"></translation>
+        <translation>Larghezza (m)</translation>
     </message>
     <message>
         <source>Length (m)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lunghezza (m)</translation>
     </message>
     <message>
         <source>Notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Note</translation>
     </message>
     <message>
         <source>Optional notes...</source>
-        <translation type="unfinished"></translation>
+        <translation>Note opzionali...</translation>
     </message>
 </context>
 <context>
     <name>AreaPickerPage</name>
     <message>
         <source>Select beds</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona prode</translation>
     </message>
     <message>
         <source>Confirm</source>
-        <translation type="unfinished"></translation>
+        <translation>Conferma</translation>
     </message>
     <message>
         <source>Deselect all</source>
-        <translation type="unfinished"></translation>
+        <translation>Deseleziona tutte</translation>
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona tutte</translation>
     </message>
 </context>
 <context>
     <name>CoverPage</name>
     <message>
         <source>Pending activities</source>
-        <translation type="unfinished"></translation>
+        <translation>Prossime attività</translation>
     </message>
     <message>
         <source>No scheduled activities</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna attività programmata</translation>
     </message>
 </context>
 <context>
     <name>GardenCanvas</name>
     <message>
         <source>Garden size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensioni orto</translation>
     </message>
     <message>
         <source>New bed</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova proda</translation>
     </message>
     <message>
         <source>Beds</source>
-        <translation type="unfinished"></translation>
+        <translation>Prode</translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina</translation>
     </message>
     <message>
         <source>Deleting bed</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina proda</translation>
     </message>
     <message>
         <source>My garden</source>
-        <translation type="unfinished"></translation>
+        <translation>Il mio orto</translation>
     </message>
 </context>
 <context>
     <name>GardenSettingsDialog</name>
     <message>
         <source>Garden size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensioni orto</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva</translation>
     </message>
     <message>
         <source>Change the number of rows and columns in the garden grid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambia il numero di righe e colonne nella griglia dell&apos;orto.</translation>
     </message>
     <message>
         <source>Rows</source>
-        <translation type="unfinished"></translation>
+        <translation>Righe</translation>
     </message>
     <message>
         <source>Columns</source>
-        <translation type="unfinished"></translation>
+        <translation>Colonne</translation>
     </message>
 </context>
 <context>
     <name>MainPage</name>
     <message>
         <source>Species</source>
-        <translation type="unfinished"></translation>
+        <translation>Specie</translation>
     </message>
     <message>
         <source>New activity</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova attività</translation>
     </message>
     <message>
         <source>Pending activities</source>
-        <translation type="unfinished"></translation>
+        <translation>Prossime attività</translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina</translation>
     </message>
     <message>
         <source>Deleting activity</source>
-        <translation type="unfinished"></translation>
+        <translation>Sto cancellando l&apos;attività</translation>
     </message>
     <message>
         <source>Completed activities</source>
-        <translation type="unfinished"></translation>
+        <translation>Attività completate</translation>
     </message>
     <message>
         <source>No activities</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna attività</translation>
     </message>
 </context>
 <context>
     <name>PlantingEditPage</name>
     <message>
         <source>Edit planting</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica piantagione</translation>
     </message>
     <message>
         <source>New planting</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova piantagione</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva</translation>
     </message>
     <message>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi</translation>
     </message>
     <message>
         <source>Species</source>
-        <translation type="unfinished"></translation>
+        <translation>Specie</translation>
     </message>
     <message>
         <source>Select...</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona...</translation>
     </message>
     <message>
         <source>Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Spazio</translation>
     </message>
     <message>
         <source>Not specified</source>
-        <translation type="unfinished"></translation>
+        <translation>Non specificato</translation>
     </message>
     <message>
         <source>Planting date</source>
-        <translation type="unfinished"></translation>
+        <translation>Piantato in data</translation>
     </message>
     <message>
         <source>Sowing type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo di semina</translation>
     </message>
     <message>
         <source>Unspecified</source>
-        <translation type="unfinished"></translation>
+        <translation>Non specificato</translation>
     </message>
     <message>
         <source>Rows</source>
-        <translation type="unfinished"></translation>
+        <translation>Righe</translation>
     </message>
     <message>
         <source>Broadcast</source>
-        <translation type="unfinished"></translation>
+        <translation>A spaglio</translation>
     </message>
     <message>
         <source>Holes</source>
-        <translation type="unfinished"></translation>
+        <translation>A buchette</translation>
     </message>
     <message>
         <source>Number of rows</source>
-        <translation type="unfinished"></translation>
+        <translation>Numero di file</translation>
     </message>
     <message>
         <source>Number of holes</source>
-        <translation type="unfinished"></translation>
+        <translation>Numero di buchette</translation>
     </message>
     <message>
         <source>Notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Note</translation>
     </message>
     <message>
         <source>Optional notes...</source>
-        <translation type="unfinished"></translation>
+        <translation>Note opzionali...</translation>
     </message>
 </context>
 <context>
     <name>SpeciesDetailPage</name>
     <message>
         <source>Edit species</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica specie</translation>
     </message>
     <message>
         <source>New species</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova specie</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva</translation>
     </message>
     <message>
         <source>Create</source>
-        <translation type="unfinished"></translation>
+        <translation>Crea</translation>
     </message>
     <message>
         <source>Common name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome comune</translation>
     </message>
     <message>
         <source>e.g. Tomato</source>
-        <translation type="unfinished"></translation>
+        <translation>es. Pomodoro</translation>
     </message>
     <message>
         <source>Variety</source>
-        <translation type="unfinished"></translation>
+        <translation>Varietà</translation>
     </message>
     <message>
         <source>e.g. San Marzano</source>
-        <translation type="unfinished"></translation>
+        <translation>es. San Marzano</translation>
     </message>
     <message>
         <source>Botanical family</source>
-        <translation type="unfinished"></translation>
+        <translation>Famiglia botanica</translation>
     </message>
     <message>
         <source>e.g. Solanaceae</source>
-        <translation type="unfinished"></translation>
+        <translation>es. Solanaceae</translation>
     </message>
     <message>
         <source>Sowing season</source>
-        <translation type="unfinished"></translation>
+        <translation>Periodo di semina</translation>
     </message>
     <message>
         <source>e.g. Mar-May</source>
-        <translation type="unfinished"></translation>
+        <translation>es. Mar-Mag</translation>
     </message>
     <message>
         <source>Days to harvest</source>
-        <translation type="unfinished"></translation>
+        <translation>Giorni al raccolto</translation>
     </message>
     <message>
         <source>e.g. 80</source>
-        <translation type="unfinished"></translation>
+        <translation>es. 80</translation>
     </message>
     <message>
         <source>Sowing spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Spazio per la semina</translation>
     </message>
     <message>
         <source>Row spacing (cm)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tra le file (cm)</translation>
     </message>
     <message>
         <source>e.g. 40</source>
-        <translation type="unfinished"></translation>
+        <translation>es. 40</translation>
     </message>
     <message>
         <source>Plant spacing (cm)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nelle file (cm)</translation>
     </message>
     <message>
         <source>e.g. 30</source>
-        <translation type="unfinished"></translation>
+        <translation>es. 30</translation>
     </message>
     <message>
         <source>Notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Note</translation>
     </message>
     <message>
         <source>Optional notes...</source>
-        <translation type="unfinished"></translation>
+        <translation>Note opzionali...</translation>
     </message>
 </context>
 <context>
     <name>SpeciesListPage</name>
     <message>
         <source>New species</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova specie</translation>
     </message>
     <message>
         <source>Species</source>
-        <translation type="unfinished"></translation>
+        <translation>Specie</translation>
     </message>
     <message>
         <source>Search species...</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca specie...</translation>
     </message>
     <message>
         <source>Deleting species</source>
-        <translation type="unfinished"></translation>
+        <translation>Sto cancellando una specie</translation>
     </message>
     <message>
         <source>No species</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna specie</translation>
     </message>
 </context>
 <context>
     <name>SpeciesPickerPage</name>
     <message>
         <source>Select species</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona specie</translation>
     </message>
     <message>
         <source>Search species...</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca specie...</translation>
     </message>
     <message>
         <source>No species</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna specie</translation>
     </message>
 </context>
 </TS>
