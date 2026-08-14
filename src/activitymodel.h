@@ -28,6 +28,19 @@ class ActivityModel : public QAbstractListModel
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
+    enum TypeId {
+        Digging = 0,
+        Watering,
+        Transplanting,
+        Sowing,
+        Fertilizing,
+        Pruning,
+        Weeding,
+        Mulching,
+        Harvest,
+        Treatment
+    };
+
     enum Roles {
         IdRole = Qt::UserRole + 1,
         ActivityTypeIdRole,

@@ -65,6 +65,53 @@
     </message>
 </context>
 <context>
+    <name>ActivityModel</name>
+    <message>
+        <source>Digging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fertilizing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Harvest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mulching</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Planted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pruning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sowing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transplanting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Treatment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Watering</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Weeding</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>AreaDetailPage</name>
     <message>
         <source>Edit bed</source>
@@ -190,10 +237,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Actual size (meters)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Width (m)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -207,6 +250,10 @@
     </message>
     <message>
         <source>Optional notes…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Actual size</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -471,15 +518,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>e.g. 30</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Optional notes…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>e.g. 25</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

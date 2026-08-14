@@ -65,6 +65,53 @@
     </message>
 </context>
 <context>
+    <name>ActivityModel</name>
+    <message>
+        <source>Digging</source>
+        <translation>Vangatura</translation>
+    </message>
+    <message>
+        <source>Fertilizing</source>
+        <translation>Concimazione</translation>
+    </message>
+    <message>
+        <source>Harvest</source>
+        <translation>Raccolto</translation>
+    </message>
+    <message>
+        <source>Mulching</source>
+        <translation>Pacciamatura</translation>
+    </message>
+    <message>
+        <source>Planted</source>
+        <translation>Piantato</translation>
+    </message>
+    <message>
+        <source>Pruning</source>
+        <translation>Potatura</translation>
+    </message>
+    <message>
+        <source>Sowing</source>
+        <translation>Semina</translation>
+    </message>
+    <message>
+        <source>Transplanting</source>
+        <translation>Trapianto</translation>
+    </message>
+    <message>
+        <source>Treatment</source>
+        <translation>Trattamento</translation>
+    </message>
+    <message>
+        <source>Watering</source>
+        <translation>Irrigazione</translation>
+    </message>
+    <message>
+        <source>Weeding</source>
+        <translation>Sarchiatura</translation>
+    </message>
+</context>
+<context>
     <name>AreaDetailPage</name>
     <message>
         <source>Edit bed</source>
@@ -190,10 +237,6 @@
         <translation>Larghezza (celle)</translation>
     </message>
     <message>
-        <source>Actual size (meters)</source>
-        <translation>Dimensioni reali (metri)</translation>
-    </message>
-    <message>
         <source>Width (m)</source>
         <translation>Larghezza (m)</translation>
     </message>
@@ -208,6 +251,10 @@
     <message>
         <source>Optional notes…</source>
         <translation>Note opzionali…</translation>
+    </message>
+    <message>
+        <source>Actual size</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -471,16 +518,16 @@
         <translation>Nelle file (cm)</translation>
     </message>
     <message>
-        <source>e.g. 30</source>
-        <translation>es. 30</translation>
-    </message>
-    <message>
         <source>Notes</source>
         <translation>Note</translation>
     </message>
     <message>
         <source>Optional notes…</source>
         <translation>Note opzionali…</translation>
+    </message>
+    <message>
+        <source>e.g. 25</source>
+        <translation type="unfinished">es. 25</translation>
     </message>
 </context>
 <context>

@@ -104,7 +104,7 @@ Page {
             menu: ContextMenu {
                 MenuItem {
                     text: qsTr("Delete")
-                    visible: model.activityId > 0 && model.activityTypeName !== "Planted"
+                    visible: model.activityId > 0
                     onClicked: {
                         _deleteActivityId = model.activityId;
                         remorsePopup.execute(qsTr("Deleting activity"));

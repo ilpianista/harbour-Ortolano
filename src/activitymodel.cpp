@@ -4,22 +4,13 @@
 #include <QSqlError>
 #include <QSqlQuery>
 
-static const QStringList s_typeNames = {QStringLiteral("Digging"),
-                                        QStringLiteral("Watering"),
-                                        QStringLiteral("Transplanting"),
-                                        QStringLiteral("Sowing"),
-                                        QStringLiteral("Fertilizing"),
-                                        QStringLiteral("Pruning"),
-                                        QStringLiteral("Weeding"),
-                                        QStringLiteral("Mulching"),
-                                        QStringLiteral("Harvest"),
-                                        QStringLiteral("Treatment")};
-
 ActivityModel::ActivityModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     m_db = QSqlDatabase::database();
-    m_typeNames = s_typeNames;
+    m_typeNames << tr("Digging") << tr("Watering") << tr("Transplanting") << tr("Sowing")
+                << tr("Fertilizing") << tr("Pruning") << tr("Weeding") << tr("Mulching")
+                << tr("Harvest") << tr("Treatment");
 }
 
 int ActivityModel::rowCount(const QModelIndex &parent) const
@@ -94,11 +85,7 @@ int ActivityModel::activityTypeId(int index) const
 
 int ActivityModel::harvestTypeId() const
 {
-    for (int i = 0; i < m_typeNames.size(); ++i) {
-        if (m_typeNames.at(i).compare(QStringLiteral("Harvest"), Qt::CaseInsensitive) == 0)
-            return i;
-    }
-    return 0;
+    return Harvest;
 }
 
 void ActivityModel::loadAreaNames(ActivityEntry &e)
@@ -217,7 +204,7 @@ void ActivityModel::loadSection(const QString &section)
             e.activityTypeName = resolveTypeName(e.activityTypeId);
             loadAreaNames(e);
         } else {
-            e.activityTypeName = QStringLiteral("Planted");
+            e.activityTypeName = tr("Planted");
             int pAreaId = q.value(8).toInt();
             QString pAreaName = q.value(9).toString();
             e.areaIds.insert(pAreaId);
