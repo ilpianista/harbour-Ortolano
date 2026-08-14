@@ -2,7 +2,7 @@ TARGET = harbour-ortolano
 
 QT += sql quick
 
-CONFIG += sailfishapp sailfishapp_i18n
+CONFIG += sailfishapp
 PKGCONFIG += sailfishapp
 
 SOURCES += \
@@ -35,9 +35,13 @@ DISTFILES += \
     qml/pages/AreaPickerPage.qml \
     qml/pages/GardenSettingsDialog.qml \
     rpm/harbour-ortolano.spec \
-    rpm/harbour-ortolano.changes.in \
-    rpm/harbour-ortolano.changes.run.in \
-    translations/harbour-ortolano.ts \
+    rpm/harbour-ortolano.changes \
+    translations/*.ts \
     harbour-ortolano.desktop
+
+CONFIG += sailfishapp_i18n
+
+TRANSLATIONS += \
+    translations/harbour-ortolano-it.ts
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
