@@ -50,6 +50,14 @@ Page {
         onDataChanged: canvas.requestPaint()
     }
 
+    Connections {
+        target: Qt.application
+        onStateChanged: {
+            if (Qt.application.state === Qt.ApplicationActive)
+                canvas.requestPaint();
+        }
+    }
+
     SilicaFlickable {
         anchors.fill: parent
         contentHeight: column.height + Theme.paddingLarge
