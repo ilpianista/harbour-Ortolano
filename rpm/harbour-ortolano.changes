@@ -1,2 +1,8 @@
+* Wed Aug 19 2026 Andrea Scarpino <andrea@scarpino.dev> 0.1.1-1
+- Sort species alphabetically after adding a new one
+- Garden canvas no more cleaning on screenlock
+- UI refactoring
+- Italian translation
+
 * Thu Aug 13 2026 Andrea Scarpino <andrea@scarpino.dev> 0.1.0-1
 - Initial release
