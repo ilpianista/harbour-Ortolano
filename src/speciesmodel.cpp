@@ -66,7 +66,7 @@ void SpeciesModel::loadAll()
     QSqlQuery q(m_db);
     q.exec(QStringLiteral("SELECT id, name, variety, family, sowing_season, harvest_days, "
                           "row_spacing_cm, plant_spacing_cm, notes "
-                          "FROM species ORDER BY name"));
+                          "FROM species ORDER BY name COLLATE NOCASE"));
     while (q.next()) {
         SpeciesEntry e;
         e.id = q.value(0).toInt();
@@ -94,7 +94,7 @@ void SpeciesModel::search(const QString &text)
     q.prepare(QStringLiteral("SELECT id, name, variety, family, sowing_season, harvest_days, "
                              "row_spacing_cm, plant_spacing_cm, notes "
                              "FROM species WHERE name LIKE ? OR variety LIKE ? OR family LIKE ? "
-                             "ORDER BY name"));
+                             "ORDER BY name COLLATE NOCASE"));
     QString pattern = QStringLiteral("%%1%").arg(text);
     q.addBindValue(pattern);
     q.addBindValue(pattern);
@@ -146,20 +146,7 @@ bool SpeciesModel::addSpecies(const QString &name,
         return false;
     }
 
-    SpeciesEntry e;
-    e.id = q.lastInsertId().toInt();
-    e.name = name;
-    e.variety = variety;
-    e.family = family;
-    e.sowingSeason = sowingSeason;
-    e.harvestDays = harvestDays;
-    e.rowSpacingCm = rowSpacingCm;
-    e.plantSpacingCm = plantSpacingCm;
-    e.notes = notes;
-    beginInsertRows(QModelIndex(), m_entries.size(), m_entries.size());
-    m_entries.append(e);
-    endInsertRows();
-    emit countChanged();
+    loadAll();
     return true;
 }
 
@@ -191,21 +178,8 @@ bool SpeciesModel::updateSpecies(int id,
         return false;
     }
 
-    for (int i = 0; i < m_entries.size(); ++i) {
-        if (m_entries[i].id == id) {
-            m_entries[i].name = name;
-            m_entries[i].variety = variety;
-            m_entries[i].family = family;
-            m_entries[i].sowingSeason = sowingSeason;
-            m_entries[i].harvestDays = harvestDays;
-            m_entries[i].rowSpacingCm = rowSpacingCm;
-            m_entries[i].plantSpacingCm = plantSpacingCm;
-            m_entries[i].notes = notes;
-            emit dataChanged(index(i), index(i));
-            return true;
-        }
-    }
-    return false;
+    loadAll();
+    return true;
 }
 
 bool SpeciesModel::deleteSpecies(int id)
