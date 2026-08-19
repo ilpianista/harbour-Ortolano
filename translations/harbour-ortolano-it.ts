@@ -552,6 +552,10 @@
         <source>No species</source>
         <translation>Nessuna specie</translation>
     </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished">Elimina</translation>
+    </message>
 </context>
 <context>
     <name>SpeciesPickerPage</name>

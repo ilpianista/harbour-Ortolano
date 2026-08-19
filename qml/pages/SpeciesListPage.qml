@@ -68,26 +68,13 @@ Page {
             width: parent.width
             contentHeight: Theme.itemSizeMedium
 
-            IconButton {
-                anchors {
-                    right: parent.right
-                    rightMargin: Theme.horizontalPageMargin
-                    verticalCenter: parent.verticalCenter
-                }
-                icon.source: "image://theme/icon-m-delete"
-                onClicked: {
-                    _deleteId = model.speciesId;
-                    remorsePopup.execute(qsTr("Deleting species"));
-                }
-            }
-
             Column {
                 anchors {
                     left: parent.left
                     leftMargin: Theme.horizontalPageMargin
                     verticalCenter: parent.verticalCenter
                 }
-                width: parent.width - 2 * Theme.horizontalPageMargin - Theme.itemSizeSmall - Theme.paddingMedium
+                width: parent.width - 2 * Theme.horizontalPageMargin
 
                 Label {
                     text: model.variety ? model.name + " (" + model.variety + ")" : (model.name || "")
@@ -105,6 +92,16 @@ Page {
             onClicked: pageStack.push(Qt.resolvedUrl("SpeciesDetailPage.qml"), {
                 speciesId: model.speciesId || 0
             })
+
+            menu: ContextMenu {
+                MenuItem {
+                    text: qsTr("Delete")
+                    onClicked: {
+                        _deleteId = model.speciesId;
+                        remorsePopup.execute(qsTr("Deleting species"));
+                    }
+                }
+            }
         }
 
         ViewPlaceholder {
