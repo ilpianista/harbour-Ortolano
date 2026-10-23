@@ -7,6 +7,7 @@ Dialog {
     allowedOrientations: Orientation.All
 
     property int editId: -1
+    property int preselectAreaId: -1
     property var _pickedAreas: []
     property int _pickedSpeciesId: -1
 
@@ -51,6 +52,10 @@ Dialog {
                     break;
                 }
             }
+        } else if (preselectAreaId > 0) {
+            _pickedAreas = [preselectAreaId];
+            var area = areaModel.getById(preselectAreaId);
+            areasButton.value = area.name || qsTr("%1 selected").arg(1);
         }
     }
 

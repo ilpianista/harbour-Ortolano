@@ -15,9 +15,9 @@ BuildRequires:  pkgconfig(Qt5Sql)
 BuildRequires:  desktop-file-utils
 
 %description
-It lets you:
-Define beds on a grid canvas; browse and manage plant species; record what
-you've planted in each bed and when; log tasks to do and tasks completed.
+It lets you define beds on a grid canvas; browse and manage plant species;
+record what you've planted in each bed and when; log tasks to do and tasks
+completed.
 
 %if 0%{?_chum}
 Title: Ortolano

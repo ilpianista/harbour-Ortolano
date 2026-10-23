@@ -173,6 +173,10 @@
         <source>No activities</source>
         <translation>Nessuna attività</translation>
     </message>
+    <message>
+        <source>New activity</source>
+        <translation type="unfinished">Nuova attività</translation>
+    </message>
 </context>
 <context>
     <name>AreaEditPage</name>

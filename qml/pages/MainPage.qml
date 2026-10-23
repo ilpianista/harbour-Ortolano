@@ -69,9 +69,10 @@ Page {
 
         delegate: ListItem {
             width: parent.width
-            contentHeight: Theme.itemSizeMedium
+            contentHeight: Math.max(Theme.itemSizeMedium, content.height + 2 * Theme.paddingMedium)
 
             Column {
+                id: content
                 anchors {
                     left: parent.left
                     leftMargin: Theme.horizontalPageMargin
@@ -98,6 +99,16 @@ Page {
                     font.pixelSize: Theme.fontSizeSmall
                     color: parent.parent.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                     truncationMode: TruncationMode.Fade
+                }
+                Label {
+                    width: parent.width
+                    visible: text.length > 0
+                    text: model.notes || ""
+                    font.pixelSize: Theme.fontSizeSmall
+                    color: parent.parent.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    wrapMode: Text.WordWrap
+                    maximumLineCount: 2
+                    truncationMode: TruncationMode.Elide
                 }
             }
 
