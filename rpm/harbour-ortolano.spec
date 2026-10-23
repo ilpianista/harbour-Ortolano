@@ -1,7 +1,7 @@
 Name:       harbour-ortolano
 
 Summary:    App for managing a personal vegetable garden.
-Version:    0.1.1
+Version:    0.1.2
 Release:    1
 License:    MIT
 URL:        https://github.com/ilpianista/harbour-Ortolano
