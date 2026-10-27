@@ -27,7 +27,7 @@ Categories:
  - Utility
 Custom:
   Repo: https://github.com/ilpianista/harbour-Ortolano
-Icon: https://raw.githubusercontent.com/ilpianista/harbour-Ortolano/master/icons/harbour-ortolano.svg
+PackageIcon: https://raw.githubusercontent.com/ilpianista/harbour-Ortolano/master/icons/harbour-ortolano.svg
 Screenshots:
    - https://raw.githubusercontent.com/ilpianista/harbour-Ortolano/master/screenshots/screenshot_1.png
    - https://raw.githubusercontent.com/ilpianista/harbour-Ortolano/master/screenshots/screenshot_2.png
